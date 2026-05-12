@@ -1,1 +1,24 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+}
 
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+#universe {
+  margin-top: 20px;
+}
+
+.planet {
+  font-size: 22px;
+  margin: 5px;
+}
