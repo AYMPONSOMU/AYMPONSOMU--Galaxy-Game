@@ -73,3 +73,29 @@ button:hover {
   50% { background: rgba(255,255,255,0.2); }
   100% { background: transparent; }
 }
+/* 📱 Mobile Responsive Fix */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    width: 90%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  #universe {
+    min-height: 200px;
+  }
+
+  .planet {
+    font-size: 18px;
+  }
+
+    }
