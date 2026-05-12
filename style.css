@@ -99,3 +99,14 @@ button:hover {
   }
 
     }
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #000010, #000000);
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    }
