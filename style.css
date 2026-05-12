@@ -1,29 +1,84 @@
 body {
   margin: 0;
-  background: radial-gradient(circle at center, #000010, #000000);
-  color: white;
-  text-align: center;
-  font-family: Arial;
   overflow: hidden;
-}
-
-/* Title glow */
-h1 {
-  margin-top: 20px;
-  text-shadow: 0 0 10px #00f0ff, 0 0 20px #0066ff;
-}
-
-/* Button cosmic style */
-button {
-  padding: 15px 25px;
-  font-size: 18px;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 12px;
-  border: none;
-  background: linear-gradient(45deg, #00f0ff, #0066ff);
+  background: black;
+  font-family: Arial, sans-serif;
   color: white;
-  box-shadow: 0 0 15px #00f0ff;
+}
+
+/* 🌌 Universe Layout */
+.universe {
+  position: relative;
+  z-index: 2;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* 🌠 Title */
+h1 {
+  font-size: 42px;
+  text-shadow: 0 0 20px cyan;
+}
+
+/* ✨ Subtitle */
+.subtitle {
+  margin-top: -10px;
+  color: #cccccc;
+  letter-spacing: 2px;
+}
+
+/* 🔮 Cosmic Portal */
+.portal {
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  margin: 30px;
+
+  background:
+    radial-gradient(circle, #00ffff, #000000);
+
+  box-shadow:
+    0 0 30px cyan,
+    0 0 60px blue;
+
+  animation:
+    pulse 3s infinite,
+    rotate 20s linear infinite;
+}
+
+/* 👁️ Mystery Text */
+.message {
+  margin-bottom: 20px;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* 🚀 Button */
+button {
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: linear-gradient(45deg, cyan, blue);
+
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 20px cyan;
+
   transition: 0.3s;
 }
 
@@ -31,87 +86,71 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Universe */
-#universe {
-  margin-top: 20px;
-  min-height: 300px;
+/* 🌌 Animated Stars */
+.stars {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    url('https://www.transparenttextures.com/patterns/stardust.png');
+
+  animation: moveStars 60s linear infinite;
+
+  opacity: 0.4;
 }
 
-/* Planet */
-.planet {
-  font-size: 22px;
-  margin: 5px;
-  animation: float 3s infinite ease-in-out;
-  text-shadow: 0 0 10px white;
-}
+/* ✨ Animations */
 
-/* Spawn animation */
-.spawn {
-  animation: popIn 0.5s ease-out;
-}
-
-/* float */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-/* pop */
-@keyframes popIn {
-  0% { transform: scale(0); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/* reset flash */
-.resetFlash {
-  animation: flash 0.8s ease-in-out;
-}
-
-@keyframes flash {
-  0% { background: rgba(0,255,255,0.1); }
-  50% { background: rgba(255,255,255,0.2); }
-  100% { background: transparent; }
-}
-/* 📱 Mobile Responsive Fix */
-@media (max-width: 768px) {
-
-  body {
-    padding: 10px;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveStars {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 1000px 1000px;
+  }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
 
   h1 {
-    font-size: 22px;
+    font-size: 28px;
+  }
+
+  .portal {
+    width: 130px;
+    height: 130px;
   }
 
   button {
-    width: 90%;
-    font-size: 16px;
-    padding: 12px;
+    width: 80%;
   }
 
-  #universe {
-    min-height: 200px;
-  }
-
-  .planet {
-    font-size: 18px;
-  }
-
-    }
-body {
-  margin: 0;
-  background: radial-gradient(circle at center, #000010, #000000);
-  color: white;
-  text-align: center;
-  font-family: Arial;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-    }
-@media (max-width: 768px) {
-  button {
-    width: 90%;
-  }
   }
