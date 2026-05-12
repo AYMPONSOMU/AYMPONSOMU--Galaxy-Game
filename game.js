@@ -1,25 +1,20 @@
-let energy = 0;
+function openRealm() {
 
-function tapCosmos() {
-  energy++;
+  const messages = [
 
-  document.getElementById("energy").innerText = energy;
+    "🌌 A hidden galaxy has awakened...",
 
-  let universe = document.getElementById("universe");
+    "👁️ The cosmic eye is watching...",
 
-  let planet = document.createElement("div");
-  planet.className = "planet spawn";
-  planet.innerHTML = "🪐 Cosmic Planet " + energy;
+    "🪐 Saturn alignment detected...",
 
-  universe.appendChild(planet);
+    "🔮 A secret portal is opening...",
 
-  // 🌌 smooth cosmic reset
-  if (energy % 10 === 0) {
-    universe.classList.add("resetFlash");
+    "✨ Unknown energy entering reality..."
+  ];
 
-    setTimeout(() => {
-      universe.innerHTML = "";
-      universe.classList.remove("resetFlash");
-    }, 800);
-  }
+  const randomMessage =
+    messages[Math.floor(Math.random() * messages.length)];
+
+  alert(randomMessage);
 }
