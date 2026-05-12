@@ -154,3 +154,82 @@ button:hover {
   }
 
   }
+/* 🪐 Orbit Systems */
+
+.orbit {
+  position: absolute;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 50%;
+
+  animation: spin linear infinite;
+}
+
+/* Orbit sizes */
+
+.orbit1 {
+  width: 260px;
+  height: 260px;
+
+  animation-duration: 10s;
+}
+
+.orbit2 {
+  width: 360px;
+  height: 360px;
+
+  animation-duration: 18s;
+}
+
+.orbit3 {
+  width: 480px;
+  height: 480px;
+
+  animation-duration: 28s;
+}
+
+/* 🪐 Planets */
+
+.planet {
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  top: -10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  box-shadow: 0 0 20px white;
+}
+
+/* Planet Colors */
+
+.planet1 {
+  background: cyan;
+}
+
+.planet2 {
+  background: orange;
+}
+
+.planet3 {
+  background: violet;
+}
+
+/* 🌌 Orbit Rotation */
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
