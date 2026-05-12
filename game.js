@@ -6,18 +6,27 @@ function tapCosmos() {
   // update energy display
   document.getElementById("energy").innerText = energy;
 
-  // create planet
   let universe = document.getElementById("universe");
 
+  // ✨ create planet with animation class
   let planet = document.createElement("div");
-  planet.className = "planet";
+  planet.className = "planet spawn";
   planet.innerHTML = "🪐 Cosmic Planet " + energy;
 
   universe.appendChild(planet);
 
-  // simple reset system (basic idea)
+  // 🌟 smooth reset system (no harsh alert spam later)
   if (energy % 10 === 0) {
-    alert("🌌 Cosmic Reset Triggered!");
-    universe.innerHTML = "";
+    
+    // cosmic reset effect
+    universe.classList.add("resetFlash");
+
+    setTimeout(() => {
+      universe.innerHTML = "";
+      universe.classList.remove("resetFlash");
+    }, 800);
+
+    // optional message
+    console.log("🌌 Cosmic Reset Occurred");
   }
 }
